@@ -407,7 +407,7 @@ namespace NibbsMobileMoneyWalletAPI.Services
 
                 RestClient restClient = new RestClient($"{ApiUrl}");
                 RestRequest restRequest = new RestRequest(Method.POST);
-                ConstructSignatureForPost(Nonce, requestObject, out string Signature)
+                ConstructSignatureForPost(Nonce, requestObject, out string Signature);
 
                 restRequest.AddHeader("Content-Type", "application/json");
                 //restRequest.AddHeader("Authorization", $"Bearer {AccessToken}");
